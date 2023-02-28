@@ -3,15 +3,17 @@ html, body {
     counter-reset: section;
 }
 .wrapper {
-    max-width: 600px;
+    max-width: 800px;
     min-height: 100%;
     display: flex;
     flex-direction: column;
     margin: auto;
-    font-family: "Roboto Slab", serif;
+    font-family: 'Roboto Slab', serif;
 }
 main {
     flex: 1 1 auto;
+    border-radius: 15px;
+    padding: 20px;
 }
 
 header {
@@ -20,27 +22,36 @@ header {
 }
 header h1 {
     margin: 0;
-    font-size: 45px;
+    font-size: 55px;
 }
 header p {
     margin: 0;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 p {
-    font-size: 14px;
+    font-size: 20px;
+    line-height: 1.6;
+    margin: 0;
+    margin-bottom: 15px;
 }
 
 .article {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 12px;
+    max-width: 620px;
+    margin: auto;
     margin-bottom: 16px;
+}
+
+.article:first-child{
+    margin-top: 16px;
 }
 
 .article h2 {
     margin: 0;
     font-size: inherit;
-    font-size: 18px
+    font-size: 20px;
 }
 
 .accordion {
@@ -54,6 +65,24 @@ p {
     outline: none;
     transition: 0.34s ease-out;
     border-radius: 12px;
+    font-family: inherit;
+}
+
+a {
+    border: 1px solid black;
+    border-radius: 8px;
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    transition: 2ms;
+    background-color: white;
+}
+
+a:hover {
+    border: 0;
+    background-color: #3e3e3e;
+    color: white;
+    transition: background-color 400ms ease-out;
 }
 
 .accordion:hover {
@@ -63,18 +92,21 @@ p {
 .active {
     border-radius: 12px 12px 0px 0px;
 }
+h2 {
+    font-size: 50px;
+}
 
 h4 {
-    margin-bottom: 0px;
+    font-size: 20px;
+    margin-bottom: 5px;
 }
 
 h3 {
+    font-size: 25px;
     margin-bottom: 14px;
     border-bottom: 1px solid #3e3e3e;
 }
-.panel p {
-    margin-top: 6px;
-}
+
 strong {
     color: #103962;
     cursor: pointer;
@@ -86,7 +118,8 @@ figure {
     padding-top: 5px;
     padding-bottom: 5px;
     margin: 0;
-    margin-bottom: 6px;
+    margin-bottom: 14px;
+    font-size: 20px;
 }
 figcaption {
     margin-top: 6px;
@@ -103,6 +136,8 @@ blockquote p {
 
 li {
     padding-bottom: 4px;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 .panel {
@@ -131,8 +166,6 @@ button.accordion.active h2:after {
 }
 
 
-
-
 footer {
     margin-top: 20px;
     text-align: center;
@@ -140,5 +173,42 @@ footer {
 }
 footer p {
     padding: 15px;
-    font-size: 14px;
+    font-size: 16px;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 38px;
+    }
+    h2::after {
+        display: none;
+    }
+    header p {
+        font-size: 14px;
+    }
+    p {
+        font-size: 14px;
+    }
+    .article h2 {
+        font-size: 18px
+    }
+    h2 {
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    h4  {
+        font-size: 16px;
+    }
+    figure  {
+        font-size: 14px;
+    }
+    footer p {
+        font-size: 12   px;
+    }
+    li {
+        font-size: 14px;
+    }
+
 }
